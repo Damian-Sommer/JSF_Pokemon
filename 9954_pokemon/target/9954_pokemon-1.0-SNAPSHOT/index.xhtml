@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <link rel="stylesheet" href="resources/css/styles.css"/>
+        <title>Home - Pokémon</title>
+    </head>
+    <body>
+        <h1>Wähle deinen Look aus.</h1>
+        <h:form>            
+            <h:commandLink action="#{navigationBean.augenfarbe}">
+                <h:graphicImage value="resources/img/h.png" class ="Image"/>
+                <f:setPropertyActionListener target="#{backingBean.img}" value="h"/>
+            </h:commandLink>
+            <h:commandLink action="#{navigationBean.augenfarbe}">
+                <h:graphicImage value="resources/img/d.png" class ="Image" />
+                <f:setPropertyActionListener target="#{backingBean.img}" value="d"/>
+            </h:commandLink>
+        </h:form>
+        <p>Klicke auf eines der Bilder.</p>
+    </body>
+</html>
